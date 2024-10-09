@@ -9,7 +9,7 @@ import { RootStackParamList } from '../App'
 // mentioning native stack screen props home so that it knows it for home
 type HomeProps = NativeStackScreenProps<RootStackParamList, 'Home'>
 
-
+import {MagnifyingGlassIcon} from "react-native-heroicons/outline"
 
 // the navigation arguement come by default since it a stack of screens
 const Home = ({navigation}:HomeProps) => {
@@ -32,7 +32,8 @@ const Home = ({navigation}:HomeProps) => {
 				<View style={{
 					flex:1,
 					flexDirection:"row",
-					justifyContent:"flex-start",
+					justifyContent:"flex-end",
+					alignItems:"center",
 					borderRadius:100,
 					backgroundColor:"rgba(255,255,255,0.2)"
 				}}>
@@ -42,10 +43,17 @@ const Home = ({navigation}:HomeProps) => {
 						style={{
 							paddingLeft:4,
 							marginLeft:20,
-							width:"60%"
+							width:"80%",
 						}}
 					/>
-					<TouchableOpacity >
+					<TouchableOpacity
+						style={{
+							borderRadius:100,
+							backgroundColor:"rgba(255,255,255,0.2)",
+							padding:15
+						}}
+					>
+						<MagnifyingGlassIcon size="25" color="white"/>
 					</TouchableOpacity>
 				</View>
 
